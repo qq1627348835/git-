@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 请实现filter函数，该函数功能如下：
+      const ret = [1, 2, 3, 4];
+      const abc = function (j) {
+        return j % 2 === 0;
+      };
+      //   console.log(filter(ret));
+      Array.prototype.shiaxuan = function fn(abc) {
+        let arr = [];
+        for (let i = 0; i <= this.length; i++) {
+          let flag = abc(this[i]);
+          if (flag)  arr.push(this[i]);        }
+        return arr;
+      };
+
+      console.log(ret.shiaxuan(abc));
+     
+      //输出结果：ret = [2,4];
+    </script>
+  </body>
+</html>
